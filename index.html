@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="cursor"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+      <path fill="%23000"
+        d="M19.27 15.32 7.77 1.61A1 1 0 0 0 6 2.25v17.89a1 1 0 0 0 1.64.77l3.08-2.58 1.56 4.3a1 1 0 0 0 1.28.6l1.88-.68a1 1 0 0 0 .6-1.28l-1.56-4.3h4.02a1 1 0 0 0 .77-1.64Z">
+      </path>
+    </svg></div>
+
+  <div class="container">
+
+    <!-- ================= FORM PANEL ================= -->
+
+    <div class="form-panel">
+
+      <h1>Resume Builder</h1>
+
+      <!-- PHOTO -->
+
+      <div class="group">
+        <input type="file" id="fileinp" accept=".jpg, .jpeg, .png">
+
+        <div id="upload" class="upload-btn">
+          Upload Photo
+        </div>
+      </div>
+
+      <!-- PERSONAL -->
+
+      <div class="group">
+
+        <label>Full Name</label>
+
+        <input type="text" placeholder="John Doe">
+
+        <label>Job Role</label>
+
+        <input type="text" placeholder="Frontend Developer">
+
+        <label>Email</label>
+
+        <input type="email" placeholder="john@gmail.com">
+
+        <label>Phone</label>
+
+        <input type="text" placeholder="+91 XXXXXXXX">
+
+        <label>Address</label>
+
+        <input type="text" placeholder="Bhopal, India">
+
+      </div>
+
+      <!-- PROFILE -->
+
+      <div class="group" id="summaryInp">
+
+        <label>Profile Summary</label>
+
+        <textarea placeholder="Write profile summary"></textarea>
+
+      </div>
+
+      <!-- SKILLS -->
+
+      <div class="group" id="skillinp">
+
+        <label>Skills</label>
+        <div>
+          <input type="text" placeholder="HTML">
+
+          <input type="text" placeholder="CSS">
+
+          <input type="text" placeholder="JavaScript">
+        </div>
+        <button type="button" class="add-btn" id="addskill">
+          + Add Skill
+        </button>
+
+        <button type="button" class="remove-btn" id="removeskill">
+          - Remove
+        </button>
+
+      </div>
+
+      <!-- LANGUAGES -->
+
+      <div class="group" id="langinp">
+
+        <label>Languages</label>
+        <div>
+          <input type="text" placeholder="English">
+
+          <input type="text" placeholder="Hindi">
+        </div>
+        <button type="button" class="add-btn" id="addlang">
+          + Add Language
+        </button>
+        <button type="button" class="remove-btn" id="removelang">
+          - Remove
+        </button>
+
+      </div>
+
+      <!-- HOBBIES -->
+
+      <div class="group" id="hobbyinp">
+
+        <label>Hobbies</label>
+        <div>
+          <input type="text" placeholder="Photography">
+
+          <input type="text" placeholder="Football">
+        </div>
+        <button class="add-btn" id="addhobby">
+          + Add Hobby
+        </button>
+        <button type="button" class="remove-btn" id="removehobby">
+          - Remove
+        </button>
+
+      </div>
+
+      <!-- EXPERIENCE -->
+
+      <div class="group" id="experienceInp">
+
+        <label>Work Experience</label>
+        <div class="experience-items">
+          <input type="text" placeholder="Job Role">
+
+          <input type="text" placeholder="Company Name">
+
+          <div class="date-group">
+
+            <input type="month">
+
+            <input type="month">
+
+          </div>
+          <textarea placeholder="Job Description"></textarea>
+        </div>
+
+
+        <button class="add-btn" id="addExp">
+          + Add Experience
+        </button>
+
+      </div>
+
+      <!-- EDUCATION -->
+
+      <div class="group" id="educationInp">
+
+        <label>Education</label>
+
+        <div class="education-items">
+          <input type="text" placeholder="Degree">
+
+          <input type="text" placeholder="University">
+
+          <div class="date-group">
+
+            <input type="month">
+
+            <input type="month">
+
+          </div>
+        </div>
+
+        <button class="add-btn" id="addEdu">
+          + Add Education
+        </button>
+
+      </div>
+      <button class="submit">Generate Resume</button>
+    </div>
+
+    <!-- ================= RESUME ================= -->
+    <div>
+      <div class="preview">
+
+        <div class="resume">
+
+          <!-- LEFT -->
+
+          <div class="left">
+
+            <div class="profile">
+
+              <img crossorigin="anonymous"
+                src="https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFzc3BvcnQlMjBwaG90b3xlbnwwfHwwfHx8MA%3D%3D">
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="left-section">
+
+              <h2>Contact</h2>
+
+              <p>
+                <strong>Address</strong><br>
+                New York, USA
+              </p>
+
+              <p>
+                <strong>Phone</strong><br>
+                +1 2345 6789
+              </p>
+
+              <p>
+                <strong>Email</strong><br>
+                jessi@email.com
+              </p>
+
+            </div>
+
+            <!-- SKILLS -->
+
+            <div class="left-section" id="skills">
+
+              <h2>Skills</h2>
+
+              <ul>
+
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React JS</li>
+
+              </ul>
+
+            </div>
+
+            <!-- LANGUAGES -->
+
+            <div class="left-section" id="langs">
+
+              <h2>Languages</h2>
+
+              <ul>
+
+                <li>English</li>
+                <li>Hindi</li>
+
+              </ul>
+
+            </div>
+
+            <!-- HOBBIES -->
+
+            <div class="left-section" id="hobbies">
+
+              <h2>Hobbies</h2>
+
+              <ul>
+
+                <li>Photography</li>
+                <li>Gaming</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="right">
+
+            <!-- TOP -->
+
+            <div class="top">
+
+              <h1>Jessica Jones</h1>
+
+              <h3>Frontend Developer</h3>
+
+            </div>
+
+            <!-- PROFILE -->
+
+            <div class="resume-section">
+
+              <h2>Profile</h2>
+
+              <p id="summary">
+
+                Passionate Frontend Developer with strong
+                experience in creating responsive and
+                user-friendly web applications.
+
+              </p>
+
+            </div>
+
+            <!-- EXPERIENCE -->
+
+            <div class="resume-section" id="experience">
+
+              <h2>Work Experience</h2>
+
+              <div class="item">
+
+                <h4>Frontend Developer</h4>
+
+                <span>ABC Company</span>
+
+                <small>Jan 2022 - Present</small>
+
+                <p>
+                  Led UX team for mobile banking app, boosting user engagement by 30% in six months.Conducted in-depth
+                  user research, reducing e-commerce cart abandonment by 25% through redesign.
+                </p>
+
+              </div>
+
+            </div>
+
+            <!-- EDUCATION -->
+
+            <div class="resume-section" id="education">
+
+              <h2>Education</h2>
+
+              <div class="item">
+
+                <h4>Bachelor of Technology</h4>
+
+                <span>RGPV University</span>
+
+                <small>2020 - 2024</small>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div id="downloadBtn">
+        <button class="upload-btn">
+          Download Resume
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
